@@ -1,6 +1,6 @@
 function getMusicTitlesByYear(tracks) {
     if (tracks.length === 0 || !Array.isArray(tracks)) {
-        throw new Error('Empty Array or Invalid Data Input');
+        console.log('Invalid Data and Empty Array')
     }
     let music = {};
     tracks.forEach(track => {
