@@ -2,7 +2,9 @@ function getMusicTitlesByYear(tracks) {
     if (tracks.length === 0) {
         throw new Error('Empty Array');
     }
-
+    if(!Array.isArray(tracks)) {
+        throw new Error('Invalid input data')
+    }
     let music = {};
     tracks.forEach(track => {
         if (!track.title || !track.artist || !track.year) {
@@ -23,4 +25,5 @@ function getMusicTitlesByYear(tracks) {
 
     return music;
 }
+
 module.exports = { getMusicTitlesByYear };
